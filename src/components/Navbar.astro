@@ -43,7 +43,7 @@ const currentPath = pathname.slice(1); // Remove leading slash
       </li>
     </ul>
     <img
-      src="./menu_icon.png"
+      src="/images/menu_icon.png"
       class="sm:hidden w-8 min-w-8 cursor-pointer"
       alt="Menu Icon"
       id="menu_icon"
@@ -55,7 +55,7 @@ const currentPath = pathname.slice(1); // Remove leading slash
     <div class="flex flex-col text-gray-600">
       <div class="flex items-center gap-2 p-3 cursor-pointer" id="back_icon">
         <img
-          src="./back_icon.png"
+          src="/images/back_icon.png"
           class="w-8 rotate-180 cursor-pointer"
           alt="Cross Icon"
         />
@@ -66,20 +66,24 @@ const currentPath = pathname.slice(1); // Remove leading slash
       </p>
       <p class="py-2 pl-6 border-t border-gray-300">
         <a href="/about" class={currentPath === "about" ? "active" : ""}
-          >ABOUT</a>
+          >ABOUT</a
+        >
       </p>
       <p class="py-2 pl-6 border-t border-gray-300">
         <a href="/employers" class={currentPath === "employers" ? "active" : ""}
-          >EMPLOYERS</a>
+          >EMPLOYERS</a
+        >
       </p>
       <p class="py-2 pl-6 border-t border-gray-300">
         <a
           href="/jobseekers"
-          class={currentPath === "jobseekers" ? "active" : ""}>JOBSEEKERS</a>
+          class={currentPath === "jobseekers" ? "active" : ""}>JOBSEEKERS</a
+        >
       </p>
       <p class="py-2 pl-6 border-t last:border-b border-gray-300">
         <a href="/contact" class={currentPath === "contact" ? "active" : ""}
-          >CONTACT</a>
+          >CONTACT</a
+        >
       </p>
     </div>
   </div>
