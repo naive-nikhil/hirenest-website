@@ -1,0 +1,56 @@
+<!-- Navbar -->
+<nav>
+  <div
+    class="flex justify-between items-center bg-[#fff9f2] py-10 font-medium text-montserrat px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]"
+  >
+    <h1 class="text-4xl text-kanit font-medium text-[#097850] cursor-pointer">
+      HIRENEST
+    </h1>
+    <ul class="hidden sm:flex gap-10 text-black font-bold">
+      <li class="cursor-pointer">HOME</li>
+      <li class="cursor-pointer">JOBSEEKERS</li>
+      <li class="cursor-pointer">EMPLOYERS</li>
+      <li class="cursor-pointer">ABOUT</li>
+      <li class="cursor-pointer">CONTACT</li>
+    </ul>
+    <img
+      src="./menu_icon.png"
+      class="sm:hidden w-8 min-w-8 cursor-pointer"
+      alt="Menu Icon"
+      id="menu_icon"
+    />
+  </div>
+  <div
+    class="sidebar_menu absolute top-0 right-0 bottom-0 overflow-hidden bg-white w-0 transition-all duration-400 cursor-pointer"
+  >
+    <div class="flex flex-col text-gray-600">
+      <div class="flex items-center gap-2 p-3 cursor-pointer" id="back_icon">
+        <img
+          src="./back_icon.png"
+          class="w-8 rotate-180 cursor-pointer"
+          alt="Cross Icon"
+        />
+        <p class="pt-1">Back</p>
+      </div>
+      <p class="py-2 pl-6 border-t border-gray-300">HOME</p>
+      <p class="py-2 pl-6 border-t border-gray-300">JOBSEEKERS</p>
+      <p class="py-2 pl-6 border-t border-gray-300">EMPLOYERS</p>
+      <p class="py-2 pl-6 border-t border-gray-300">ABOUT</p>
+      <p class="py-2 pl-6 border-t last:border-b border-gray-300">CONTACT</p>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuIcon = document.querySelector("#menu_icon");
+  const backIcon = document.querySelector("#back_icon");
+  const menu = document.querySelector(".sidebar_menu");
+
+  menuIcon?.addEventListener("click", () => {
+    menu?.classList.toggle("active");
+  });
+
+  backIcon?.addEventListener("click", () => {
+    menu?.classList.toggle("active");
+  });
+</script>

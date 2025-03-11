@@ -1,0 +1,33 @@
+<div class="text-center px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] py-20">
+  <p class="text-2xl font-medium text-gray-800">
+    Stay Updated with Latest Jobs & Hiring Tips
+  </p>
+  <p class="text-gray-400 mt-3">
+    Subscribe to get curated job opportunities and hiring advice.
+  </p>
+  <form
+    action=""
+    class="w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 pl-3 border overflow-hidden"
+    id="newsletter-form"
+  >
+    <input
+      type="email"
+      placeholder="Enter your email"
+      class="w-full sm:flex-1 outline-none"
+      required
+    />
+    <button
+      type="submit"
+      class="bg-[#097850] text-white font-medium text-xs px-10 py-4 outline-none cursor-pointer active:bg-[#097850]/90"
+    >
+      SUBSCRIBE
+    </button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById("newsletter-form");
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+</script>
