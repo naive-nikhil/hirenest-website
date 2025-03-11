@@ -1,4 +1,9 @@
-<!-- Navbar -->
+---
+// Determine current page for navigation highlighting
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // Remove leading slash
+---
+
 <nav>
   <div
     class="flex justify-between items-center bg-[#fff9f2] py-10 font-medium text-montserrat px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]"
@@ -7,11 +12,35 @@
       HIRENEST
     </h1>
     <ul class="hidden sm:flex gap-10 text-black font-bold">
-      <li class="cursor-pointer">HOME</li>
-      <li class="cursor-pointer">JOBSEEKERS</li>
-      <li class="cursor-pointer">EMPLOYERS</li>
-      <li class="cursor-pointer">ABOUT</li>
-      <li class="cursor-pointer">CONTACT</li>
+      <li class="cursor-pointer">
+        <a href="/" class={currentPath === "" ? "active" : ""}>HOME</a>
+      </li>
+      <li class="cursor-pointer">
+        <a href="/about" class={currentPath === "about" ? "active" : ""}>
+          ABOUT
+        </a>
+      </li>
+      <li class="cursor-pointer">
+        <a
+          href="/employers"
+          class={currentPath === "employers" ? "active" : ""}
+        >
+          EMPLOYERS
+        </a>
+      </li>
+      <li class="cursor-pointer">
+        <a
+          href="/jobseekers"
+          class={currentPath === "jobseekers" ? "active" : ""}
+        >
+          JOBSEEKERS
+        </a>
+      </li>
+      <li class="cursor-pointer">
+        <a href="/contact" class={currentPath === "contact" ? "active" : ""}>
+          CONTACT
+        </a>
+      </li>
     </ul>
     <img
       src="./menu_icon.png"
@@ -32,11 +61,26 @@
         />
         <p class="pt-1">Back</p>
       </div>
-      <p class="py-2 pl-6 border-t border-gray-300">HOME</p>
-      <p class="py-2 pl-6 border-t border-gray-300">JOBSEEKERS</p>
-      <p class="py-2 pl-6 border-t border-gray-300">EMPLOYERS</p>
-      <p class="py-2 pl-6 border-t border-gray-300">ABOUT</p>
-      <p class="py-2 pl-6 border-t last:border-b border-gray-300">CONTACT</p>
+      <p class="py-2 pl-6 border-t border-gray-300">
+        <a href="/" class={currentPath === "" ? "active" : ""}>HOME</a>
+      </p>
+      <p class="py-2 pl-6 border-t border-gray-300">
+        <a href="/about" class={currentPath === "about" ? "active" : ""}
+          >ABOUT</a>
+      </p>
+      <p class="py-2 pl-6 border-t border-gray-300">
+        <a href="/employers" class={currentPath === "employers" ? "active" : ""}
+          >EMPLOYERS</a>
+      </p>
+      <p class="py-2 pl-6 border-t border-gray-300">
+        <a
+          href="/jobseekers"
+          class={currentPath === "jobseekers" ? "active" : ""}>JOBSEEKERS</a>
+      </p>
+      <p class="py-2 pl-6 border-t last:border-b border-gray-300">
+        <a href="/contact" class={currentPath === "contact" ? "active" : ""}
+          >CONTACT</a>
+      </p>
     </div>
   </div>
 </nav>

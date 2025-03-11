@@ -1,7 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Choose from "../components/Choose.astro";
+import Newsletter from "../components/Newsletter.astro";
+import Process from "../components/Process.astro";
+import Serve from "../components/Serve.astro";
+import Ready from "../components/Ready.astro";
 ---
 
-<Layout>
-	
-</Layout>
+<MainLayout title="Hirenest - Where Jobs Find People">
+  <Hero />
+  <Process />
+  <Serve />
+  <Choose />
+  <Ready />
+  <Newsletter />
+</MainLayout>
