@@ -7,178 +7,220 @@ import MainLayout from "../layouts/MainLayout.astro";
   title="About Hirenest"
   description="Learn more about Hirenest's vision, mission, and values"
 >
-  <div class="">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <!-- Hero Section -->
-      <div class="flex flex-col items-center mb-16">
-        <Title text1="ABOUT" text2="HIRENEST" />
-        <p class="text-xl text-center text-gray-600 mx-auto">
-          We're on a mission to transform the recruitment landscape by
-          connecting the right talent with the right opportunities.
+  <section
+    class="flex flex-col sm:flex-row px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-[#fff9f2]"
+  >
+    <div
+      class="w-full sm:w-[45%] flex items-center justify-center py-10 sm:py-0"
+    >
+      <div class="text-[#414141]">
+        <div class="flex items-center gap-2">
+          <p class="w-8 md:w-11 h-[2px] bg-[#ee6551]"></p>
+          <p class="font-bold text-sm md:text-base text-[#ee6551]">ABOUT US</p>
+        </div>
+        <h1
+          class="text-3xl sm:py-3 lg:text-5xl font-bold leading-relaxed text-black"
+        >
+          TRANSFORMING THE FUTURE OF RECRUITMENT
+        </h1>
+        <p class="leading-relaxed sm:py-3 text-lg font-medium text-gray-500">
+          At <span class="text-[#ee6551] font-bold">Hirenest</span>, we're
+          revolutionizing how companies and talent connect, creating meaningful
+          career opportunities and building stronger teams.
+        </p>
+      </div>
+    </div>
+    <div
+      class="w-full sm:w-[55%] py-0 sm:py-15 flex items-center justify-center"
+    >
+      <svg
+        viewBox="0 0 800 600"
+        class="w-full h-full"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- Background Elements -->
+        <circle cx="400" cy="300" r="250" fill="#FFF5EC"></circle>
+        <circle cx="400" cy="300" r="200" fill="#FFE4D4" opacity="0.5"></circle>
+
+        <!-- Central Building/Network Hub -->
+        <rect x="350" y="200" width="100" height="200" fill="#097850" rx="10"
+        ></rect>
+
+        <!-- Connected Nodes representing people/companies -->
+        <circle cx="250" cy="250" r="30" fill="#ee6551"></circle>
+        <circle cx="550" cy="250" r="30" fill="#ee6551"></circle>
+        <circle cx="250" cy="350" r="30" fill="#ee6551"></circle>
+        <circle cx="550" cy="350" r="30" fill="#ee6551"></circle>
+
+        <!-- Connection Lines -->
+        <path d="M 280 250 L 350 250" stroke="#097850" stroke-width="3"></path>
+        <path d="M 450 250 L 520 250" stroke="#097850" stroke-width="3"></path>
+        <path d="M 280 350 L 350 350" stroke="#097850" stroke-width="3"></path>
+        <path d="M 450 350 L 520 350" stroke="#097850" stroke-width="3"></path>
+      </svg>
+    </div>
+  </section>
+  <div class="container mx-auto flex flex-col gap-20 px-4 sm:px-6 lg:px-8 py-12">
+
+    <div class="grid md:grid-cols-2 gap-12 mb-16">
+      <!-- Vision Section -->
+      <div
+        class="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+      >
+        <div class="w-12 h-12 mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ee6551"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        <h2
+          class="text-2xl font-bold text-[#097850] mb-4 hover:text-[#ee6551] transition-colors duration-300"
+        >
+          Our Vision
+        </h2>
+        <p class="text-lg text-gray-600">
+          To become the world's most trusted platform for connecting talent with
+          opportunities, making job searching and hiring seamless and efficient.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-12 mb-16">
-        <!-- Vision Section -->
-        <div
-          class="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
-        >
-          <div class="w-12 h-12 mb-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#ee6551"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h2
-            class="text-2xl font-bold text-[#097850] mb-4 hover:text-[#ee6551] transition-colors duration-300"
+      <!-- Mission Section -->
+      <div
+        class="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+      >
+        <div class="w-12 h-12 mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ee6551"
           >
-            Our Vision
-          </h2>
-          <p class="text-lg text-gray-600">
-            To become the world's most trusted platform for connecting talent
-            with opportunities, making job searching and hiring seamless and
-            efficient.
-          </p>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+            ></path>
+          </svg>
         </div>
-
-        <!-- Mission Section -->
-        <div
-          class="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+        <h2
+          class="text-2xl font-bold text-[#097850] mb-4 hover:text-[#ee6551] transition-colors duration-300"
         >
-          <div class="w-12 h-12 mb-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#ee6551"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-              ></path>
-            </svg>
-          </div>
-          <h2
-            class="text-2xl font-bold text-[#097850] mb-4 hover:text-[#ee6551] transition-colors duration-300"
-          >
-            Our Mission
-          </h2>
-          <p class="text-lg text-gray-600">
-            To revolutionize the recruitment process by leveraging technology
-            and human insight, creating meaningful connections between employers
-            and job seekers.
-          </p>
-        </div>
+          Our Mission
+        </h2>
+        <p class="text-lg text-gray-600">
+          To revolutionize the recruitment process by leveraging technology and
+          human insight, creating meaningful connections between employers and
+          job seekers.
+        </p>
       </div>
+    </div>
 
-      <!-- Values Section -->
-      <div class="flex flex-col items-center mb-16">
-        <Title text1="OUR" text2="VALUES" />
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Innovation -->
-          <div
-            class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="w-10 h-10 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#ee6551"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-                ></path>
-              </svg>
-            </div>
-            <h3
-              class="text-xl font-bold text-[#097850] mb-2 hover:text-[#ee6551] transition-colors duration-300"
+    <!-- Values Section -->
+    <div class="flex flex-col items-center mb-16">
+      <Title text1="OUR" text2="VALUES" />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Innovation -->
+        <div
+          class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <div class="w-10 h-10 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ee6551"
             >
-              Innovation
-            </h3>
-            <p class="text-gray-600">
-              We constantly push boundaries and embrace new technologies to
-              improve our services.
-            </p>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              ></path>
+            </svg>
           </div>
+          <h3
+            class="text-xl font-bold text-[#097850] mb-2 hover:text-[#ee6551] transition-colors duration-300"
+          >
+            Innovation
+          </h3>
+          <p class="text-gray-600">
+            We constantly push boundaries and embrace new technologies to
+            improve our services.
+          </p>
+        </div>
 
-          <!-- Integrity -->
-          <div
-            class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="w-10 h-10 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#ee6551"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
-                ></path>
-              </svg>
-            </div>
-            <h3
-              class="text-xl font-bold text-[#097850] mb-2 hover:text-[#ee6551] transition-colors duration-300"
+        <!-- Integrity -->
+        <div
+          class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <div class="w-10 h-10 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ee6551"
             >
-              Integrity
-            </h3>
-            <p class="text-gray-600">
-              We maintain the highest standards of honesty and transparency in
-              all our dealings.
-            </p>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+              ></path>
+            </svg>
           </div>
+          <h3
+            class="text-xl font-bold text-[#097850] mb-2 hover:text-[#ee6551] transition-colors duration-300"
+          >
+            Integrity
+          </h3>
+          <p class="text-gray-600">
+            We maintain the highest standards of honesty and transparency in all
+            our dealings.
+          </p>
+        </div>
 
-          <!-- Excellence -->
-          <div
-            class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="w-10 h-10 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#ee6551"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                ></path>
-              </svg>
-            </div>
-            <h3
-              class="text-xl font-bold text-[#097850] mb-2 hover:text-[#ee6551] transition-colors duration-300"
+        <!-- Excellence -->
+        <div
+          class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <div class="w-10 h-10 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ee6551"
             >
-              Excellence
-            </h3>
-            <p class="text-gray-600">
-              We strive for excellence in everything we do, delivering the best
-              possible outcomes.
-            </p>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              ></path>
+            </svg>
           </div>
+          <h3
+            class="text-xl font-bold text-[#097850] mb-2 hover:text-[#ee6551] transition-colors duration-300"
+          >
+            Excellence
+          </h3>
+          <p class="text-gray-600">
+            We strive for excellence in everything we do, delivering the best
+            possible outcomes.
+          </p>
         </div>
       </div>
     </div>

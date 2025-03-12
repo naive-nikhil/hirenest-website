@@ -4,15 +4,71 @@ import Title from "../components/Title.astro";
 ---
 
 <MainLayout title="Contact Hirenest" description="Get in touch with our team">
+  <section
+    class="flex flex-col sm:flex-row px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-[#fff9f2] mb-16"
+  >
+    <div
+      class="w-full sm:w-[45%] flex items-center justify-center py-10 sm:py-0"
+    >
+      <div class="text-[#414141]">
+        <div class="flex items-center gap-2">
+          <p class="w-8 md:w-11 h-[2px] bg-[#ee6551]"></p>
+          <p class="font-bold text-sm md:text-base text-[#ee6551]">
+            CONTACT US
+          </p>
+        </div>
+        <h1
+          class="text-3xl sm:py-3 lg:text-5xl font-bold leading-relaxed text-black"
+        >
+          GET IN TOUCH WITH OUR TEAM
+        </h1>
+        <p class="leading-relaxed sm:py-3 text-lg font-medium text-gray-500">
+          Have questions? We're here to help! Reach out to <span
+            class="text-[#ee6551] font-bold">Hirenest</span
+          > for support, inquiries, or to learn more about our services.
+        </p>
+      </div>
+    </div>
+    <div
+      class="w-full sm:w-[55%] py-0 sm:py-15 flex items-center justify-center"
+    >
+      <svg
+        viewBox="0 0 800 600"
+        class="w-full h-full"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- Background Elements -->
+        <circle cx="400" cy="300" r="250" fill="#FFF5EC"></circle>
+        <circle cx="400" cy="300" r="200" fill="#FFE4D4" opacity="0.5"></circle>
+
+        <!-- Contact Icons -->
+        <circle cx="400" cy="300" r="120" fill="#097850"></circle>
+        <circle cx="400" cy="300" r="90" fill="#fff"></circle>
+
+        <!-- Email Icon -->
+        <rect x="350" y="270" width="100" height="60" rx="10" fill="#ee6551"
+        ></rect>
+        <path
+          d="M 350 280 L 400 310 L 450 280"
+          stroke="#fff"
+          stroke-width="4"
+          fill="none"></path>
+
+        <!-- Phone Icon -->
+        <circle cx="280" cy="300" r="40" fill="#ee6551"></circle>
+        <path
+          d="M 265 285 Q 280 280 295 285 L 295 315 Q 280 320 265 315 Z"
+          fill="#fff"></path>
+
+        <!-- Chat Icon -->
+        <circle cx="520" cy="300" r="40" fill="#ee6551"></circle>
+        <rect x="505" y="285" width="30" height="20" rx="5" fill="#fff"></rect>
+        <circle cx="520" cy="295" r="3" fill="#ee6551"></circle>
+      </svg>
+    </div>
+  </section>
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Hero Section -->
-    <div class="flex flex-col items-center mb-16">
-      <Title text1="CONTACT" text2="US" />
-      <p class="text-xl text-center text-gray-600 mx-auto">
-        Get in touch with us. We're here to help and answer any questions you
-        might have.
-      </p>
-    </div>
 
     <div class="grid md:grid-cols-2 gap-8 mb-16">
       <!-- Contact Information -->
@@ -45,8 +101,12 @@ import Title from "../components/Title.astro";
               <h3 class="text-lg sm:text-xl font-bold text-[#097850] mb-2">
                 Our Location
               </h3>
-              <p class="text-sm sm:text-base text-gray-600">19 Cambridge Street</p>
-              <p class="text-sm sm:text-base text-gray-600">Box Hill South, Melbourne, 3128</p>
+              <p class="text-sm sm:text-base text-gray-600">
+                19 Cambridge Street
+              </p>
+              <p class="text-sm sm:text-base text-gray-600">
+                Box Hill South, Melbourne, 3128
+              </p>
               <p class="text-sm sm:text-base text-gray-600">Australia</p>
             </div>
           </div>
@@ -69,9 +129,15 @@ import Title from "../components/Title.astro";
               </svg>
             </div>
             <div>
-              <h3 class="text-lg sm:text-xl font-bold text-[#097850] mb-2">Email Us</h3>
-              <p class="text-sm sm:text-base text-gray-600">akash@hirenest.com.au</p>
-              <p class="text-sm sm:text-base text-gray-600">support@hirenest.com</p>
+              <h3 class="text-lg sm:text-xl font-bold text-[#097850] mb-2">
+                Email Us
+              </h3>
+              <p class="text-sm sm:text-base text-gray-600">
+                akash@hirenest.com.au
+              </p>
+              <p class="text-sm sm:text-base text-gray-600">
+                support@hirenest.com
+              </p>
             </div>
           </div>
 
@@ -93,7 +159,9 @@ import Title from "../components/Title.astro";
               </svg>
             </div>
             <div>
-              <h3 class="text-lg sm:text-xl font-bold text-[#097850] mb-2">Call Us</h3>
+              <h3 class="text-lg sm:text-xl font-bold text-[#097850] mb-2">
+                Call Us
+              </h3>
               <p class="text-sm sm:text-base text-gray-600">+61 422 488 865</p>
             </div>
           </div>

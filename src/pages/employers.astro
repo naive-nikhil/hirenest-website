@@ -1,8 +1,289 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Title from "../components/Title.astro";
 ---
 
 <MainLayout
   title="About Hirenest"
   description="Learn more about Hirenest's vision, mission, and values"
-/>
+>
+  <!-- Hero Section -->
+  <section
+    class="flex flex-col sm:flex-row px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-[#fff9f2]"
+  >
+    <div
+      class="w-full sm:w-[45%] flex items-center justify-center py-10 sm:py-0"
+    >
+      <div class="text-[#414141]">
+        <div class="flex items-center gap-2">
+          <p class="w-8 md:w-11 h-[2px] bg-[#ee6551]"></p>
+          <p class="font-bold text-sm md:text-base text-[#ee6551]">
+            FOR EMPLOYERS
+          </p>
+        </div>
+        <h1
+          class="text-3xl sm:py-3 lg:text-5xl font-bold leading-relaxed text-black"
+        >
+          HIRE THE BEST TALENT FOR YOUR TEAM
+        </h1>
+        <p class="leading-relaxed sm:py-3 text-lg font-medium text-gray-500">
+          Find exceptional candidates who align with your company's vision and
+          culture. Let <span class="text-[#ee6551] font-bold">Hirenest</span> help
+          you build your dream team.
+        </p>
+        <div class="flex gap-2 mt-6">
+          <button
+            onclick="document.getElementById('employer-form').scrollIntoView({behavior: 'smooth'})"
+            class="bg-[#097850] text-white px-8 py-3 font-medium active:bg-[#097850]/80"
+          >
+            GET STARTED
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full sm:w-[55%] py-0 sm:py-15 flex items-center justify-center"
+    >
+      <svg
+        viewBox="0 0 800 600"
+        class="w-full h-full"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- Background Elements -->
+        <circle cx="400" cy="300" r="250" fill="#FFF5EC"></circle>
+        <circle cx="400" cy="300" r="200" fill="#FFE4D4" opacity="0.5"></circle>
+
+        <!-- Office Building -->
+        <rect x="300" y="150" width="200" height="300" fill="#097850" rx="10"
+        ></rect>
+        <rect x="320" y="170" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+        <rect x="380" y="170" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+        <rect x="440" y="170" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+        <rect x="320" y="230" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+        <rect x="380" y="230" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+        <rect x="440" y="230" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+        <rect x="320" y="290" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+        <rect x="380" y="290" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+        <rect x="440" y="290" width="40" height="40" fill="#FFFFFF" rx="5"
+        ></rect>
+
+        <!-- People Silhouettes -->
+        <circle cx="250" cy="350" r="40" fill="#ee6551"></circle>
+        <rect x="230" y="390" width="40" height="60" fill="#ee6551" rx="20"
+        ></rect>
+
+        <circle cx="550" cy="350" r="40" fill="#ee6551"></circle>
+        <rect x="530" y="390" width="40" height="60" fill="#ee6551" rx="20"
+        ></rect>
+
+        <!-- Connection Lines -->
+        <path
+          d="M 250 350 Q 400 250 550 350"
+          stroke="#097850"
+          stroke-width="4"
+          fill="none"></path>
+
+        <!-- Abstract Shapes -->
+        <circle cx="200" cy="200" r="20" fill="#ee6551" opacity="0.3"></circle>
+        <circle cx="600" cy="200" r="20" fill="#ee6551" opacity="0.3"></circle>
+        <circle cx="400" cy="150" r="15" fill="#097850" opacity="0.3"></circle>
+
+        <!-- Check Marks -->
+        <path
+          d="M 180 280 l 15 15 l 25 -25"
+          stroke="#097850"
+          stroke-width="4"
+          fill="none"></path>
+        <path
+          d="M 580 280 l 15 15 l 25 -25"
+          stroke="#097850"
+          stroke-width="4"
+          fill="none"></path>
+
+        <!-- Document Icons -->
+        <rect x="150" y="220" width="30" height="40" fill="#097850" rx="5"
+        ></rect>
+        <rect x="620" y="220" width="30" height="40" fill="#097850" rx="5"
+        ></rect>
+        <line
+          x1="160"
+          y1="230"
+          x2="170"
+          y2="230"
+          stroke="white"
+          stroke-width="2"></line>
+        <line
+          x1="160"
+          y1="240"
+          x2="170"
+          y2="240"
+          stroke="white"
+          stroke-width="2"></line>
+        <line
+          x1="630"
+          y1="230"
+          x2="640"
+          y2="230"
+          stroke="white"
+          stroke-width="2"></line>
+        <line
+          x1="630"
+          y1="240"
+          x2="640"
+          y2="240"
+          stroke="white"
+          stroke-width="2"></line>
+      </svg>
+    </div>
+  </section>
+
+  <!-- What We Do Section -->
+  <section class="py-16 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+    <div class="text-center mb-12">
+      <div class="flex items-center justify-center gap-2">
+        <Title text1="WHAT" text2="WE DO" />
+      </div>
+      <h2 class="text-3xl font-bold mt-4 text-black">
+        Streamlined Hiring Solutions
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="w-12 h-12 mx-auto mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none" 
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ee6551"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300">Smart Candidate Matching</h3>
+        <p class="text-gray-600">
+          Our AI-powered platform matches you with candidates who perfectly fit
+          your requirements.
+        </p>
+      </div>
+      <div class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="w-12 h-12 mx-auto mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ee6551"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300">Time-Efficient Process</h3>
+        <p class="text-gray-600">
+          Reduce your time-to-hire with our streamlined recruitment process and
+          tools.
+        </p>
+      </div>
+      <div class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="w-12 h-12 mx-auto mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ee6551"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+            />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300">Quality Assurance</h3>
+        <p class="text-gray-600">
+          Access pre-screened candidates with verified skills and experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section
+    id="employer-form"
+    class="py-16 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-[#fff9f2]"
+  >
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="flex items-center justify-center gap-2">
+          <Title text1="WHAT" text2="WE DO" />
+        </div>
+        <h2 class="text-3xl font-bold mt-4 text-black">
+          Tell Us About Your Staffing Needs
+        </h2>
+      </div>
+
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-gray-700 mb-2" for="name"
+              >Company Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2" for="email"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <label class="block text-gray-700 mb-2" for="requirements"
+            >Staffing Requirements</label
+          >
+          <textarea
+            id="requirements"
+            rows="5"
+            class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
+            required></textarea>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-[#097850] text-white px-8 py-3 font-medium active:bg-[#097850]/80"
+          >
+            Submit Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</MainLayout>
