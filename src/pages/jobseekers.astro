@@ -116,7 +116,9 @@ import Title from "../components/Title.astro";
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div
+        class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+      >
         <div class="w-12 h-12 mx-auto mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -129,16 +131,22 @@ import Title from "../components/Title.astro";
               stroke-linecap="round"
               stroke-linejoin="round"
               d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"
-            />
+            ></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300">Curated Job Matches</h3>
+        <h3
+          class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300"
+        >
+          Curated Job Matches
+        </h3>
         <p class="text-gray-600">
           Get personalized job recommendations based on your skills, experience,
           and career goals.
         </p>
       </div>
-      <div class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div
+        class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+      >
         <div class="w-12 h-12 mx-auto mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -151,16 +159,22 @@ import Title from "../components/Title.astro";
               stroke-linecap="round"
               stroke-linejoin="round"
               d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
-            />
+            ></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300">Career Growth</h3>
+        <h3
+          class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300"
+        >
+          Career Growth
+        </h3>
         <p class="text-gray-600">
           Access opportunities with leading companies and take your career to
           the next level.
         </p>
       </div>
-      <div class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div
+        class="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+      >
         <div class="w-12 h-12 mx-auto mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -173,10 +187,14 @@ import Title from "../components/Title.astro";
               stroke-linecap="round"
               stroke-linejoin="round"
               d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-            />
+            ></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300">Professional Support</h3>
+        <h3
+          class="text-xl font-bold text-[#097850] mb-3 hover:text-[#ee6551] transition-colors duration-300"
+        >
+          Professional Support
+        </h3>
         <p class="text-gray-600">
           Get guidance throughout your job search journey from our expert team.
         </p>
@@ -199,13 +217,14 @@ import Title from "../components/Title.astro";
         </h2>
       </div>
 
-      <form class="space-y-6">
+      <form class="space-y-6" id="jobseekerForm">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label class="block text-gray-700 mb-2" for="name">Full Name</label>
             <input
               type="text"
               id="name"
+              name="fullName"
               class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
               required
             />
@@ -217,6 +236,7 @@ import Title from "../components/Title.astro";
             <input
               type="email"
               id="email"
+              name="email"
               class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
               required
             />
@@ -229,6 +249,7 @@ import Title from "../components/Title.astro";
           <input
             type="tel"
             id="phone"
+            name="phone"
             class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
             required
           />
@@ -240,18 +261,7 @@ import Title from "../components/Title.astro";
           <input
             type="number"
             id="experience"
-            class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
-            required
-          />
-        </div>
-        <div>
-          <label class="block text-gray-700 mb-2" for="resume"
-            >Upload Resume</label
-          >
-          <input
-            type="file"
-            id="resume"
-            accept=".pdf,.doc,.docx"
+            name="experience"
             class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
             required
           />
@@ -262,6 +272,7 @@ import Title from "../components/Title.astro";
           >
           <textarea
             id="message"
+            name="message"
             rows="5"
             class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-[#097850]"
           ></textarea>
@@ -275,6 +286,80 @@ import Title from "../components/Title.astro";
           </button>
         </div>
       </form>
+
+      <!-- Add success message div -->
+      <div
+        id="successMessage"
+        class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded"
+      >
+        Thank you! Your application has been submitted successfully.
+      </div>
+
+      <script>
+        const form = document.getElementById("jobseekerForm");
+        const successMessage = document.getElementById("successMessage");
+
+        form?.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(form as HTMLFormElement);
+          const data = Object.fromEntries(formData);
+
+          try {
+            // Create URL with parameters
+            const scriptURL =
+              "https://script.google.com/macros/s/AKfycbwVqt7eOniwmAMHvov_mDMRYwuwnu0BtPATt3Mg_FaG2TqFC0_gX5PGGWpqCGSsv3Xxog/exec";
+
+            // Convert form data to URL parameters
+            const params = new URLSearchParams();
+            params.append("fullName", data.fullName.toString());
+            params.append("email", data.email.toString());
+            params.append("phone", data.phone.toString());
+            params.append("experience", data.experience.toString());
+            params.append("message", data.message?.toString() || "");
+            params.append("formType", "jobseeker"); // Add this to identify the form type
+
+            // Create the full URL
+            const fullURL = `${scriptURL}?${params.toString()}`;
+
+            // Log the URL being called (for debugging)
+            console.log("Submitting to:", fullURL);
+
+            // Send request
+            const response = await fetch(fullURL, {
+              method: "GET",
+              mode: "no-cors",
+              headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+              },
+            });
+
+            // Show success message
+            if (successMessage) {
+              successMessage.classList.remove("hidden");
+              successMessage.textContent =
+                "Thank you! Your application has been submitted successfully.";
+            }
+
+            // Reset form
+            (form as HTMLFormElement).reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+              if (successMessage) successMessage.classList.add("hidden");
+            }, 5000);
+          } catch (error) {
+            console.error("Error:", error);
+            if (successMessage) {
+              successMessage.classList.remove("hidden");
+              successMessage.textContent =
+                "There was an error submitting the form. Please try again.";
+              successMessage.className =
+                "mt-4 p-4 bg-red-100 text-red-700 rounded";
+            }
+          }
+        });
+      </script>
     </div>
   </section>
 </MainLayout>
