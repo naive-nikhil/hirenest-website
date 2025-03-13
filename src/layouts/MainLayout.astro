@@ -1,9 +1,18 @@
 ---
 // src/layouts/MainLayout.astro
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
 const {
   title,
-  description = "Hirenest - Find jobs, find candidates, find talent, find opportunities, find employers, find hires",
+  description = "Hirenest connects talented professionals with leading employers. Find your dream job or hire the perfect candidate today.",
+  image = "/images/hirenest-og.png", // Create this image for social sharing
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, "https://hirenest.in");
 
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
@@ -18,6 +27,7 @@ import { BUILD_VERSION } from "../utils/version";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="build-version" content={BUILD_VERSION} />
+    <link rel="canonical" href={canonicalURL} />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -37,6 +47,52 @@ import { BUILD_VERSION } from "../utils/version";
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <title>{title}</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content={title} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, canonicalURL)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, canonicalURL)} />
+
+    <!-- Additional SEO Tags -->
+    <meta
+      name="keywords"
+      content="recruitment, jobs, hiring, employment, career, job search, recruitment agency, staffing solutions"
+    />
+    <meta name="author" content="Hirenest" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Hirenest",
+        "url": "https://hirenest.in",
+        "logo": "https://hirenest.in/images/logo.png",
+        "description": "Hirenest connects talented professionals with leading employers. Find your dream job or hire the perfect candidate today.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-YOUR-PHONE",
+          "contactType": "customer service"
+        }
+      }
+    </script>
   </head>
   <body>
     <header>

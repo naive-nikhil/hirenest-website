@@ -7,9 +7,13 @@ import Process from "../components/Process.astro";
 import Serve from "../components/Serve.astro";
 import Ready from "../components/Ready.astro";
 import WhatsAppChat from "../components/WhatsAppChat.astro";
+
+const title = "Hirenest - Where Jobs Find People | Leading Recruitment Agency";
+const description =
+  "Hirenest connects talented professionals with leading employers. Find your dream job or hire the perfect candidate with our expert recruitment services.";
 ---
 
-<MainLayout title="Hirenest - Where Jobs Find People">
+<MainLayout title={title} description={description}>
   <Hero />
   <Process />
   <Serve />
