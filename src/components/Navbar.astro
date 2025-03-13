@@ -42,25 +42,46 @@ const currentPath = pathname.slice(1); // Remove leading slash
         </a>
       </li>
     </ul>
-    <img
-      src="/images/menu_icon.png"
-      class="sm:hidden w-8 min-w-8 cursor-pointer"
-      alt="Menu Icon"
-      id="menu_icon"
-    />
+    <button class="sm:hidden cursor-pointer" id="menu_icon" aria-label="Menu">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        class="w-8 h-8"
+      >
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
   </div>
   <div
     class="sidebar_menu absolute top-0 right-0 bottom-0 overflow-hidden bg-white w-0 transition-all duration-400 cursor-pointer"
   >
     <div class="flex flex-col text-gray-600">
-      <div class="flex items-center gap-2 p-3 cursor-pointer" id="back_icon">
-        <img
-          src="/images/back_icon.png"
-          class="w-8 rotate-180 cursor-pointer"
-          alt="Cross Icon"
-        />
-        <p class="pt-1">Back</p>
-      </div>
+      <button
+        class="flex items-center gap-2 p-3 cursor-pointer"
+        id="back_icon"
+        aria-label="Close menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          class="w-6 h-6"
+        >
+          <path d="M18 6L6 18M6 6l12 12"></path>
+        </svg>
+        <span class="pt-1">Back</span>
+      </button>
       <p class="py-2 pl-6 border-t border-gray-300">
         <a href="/" class={currentPath === "" ? "active" : ""}>HOME</a>
       </p>
