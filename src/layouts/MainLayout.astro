@@ -8,7 +8,7 @@ const {
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import { APP_VERSION } from "../utils/version";
+import { BUILD_VERSION } from "../utils/version";
 ---
 
 <!doctype html>
@@ -17,6 +17,7 @@ import { APP_VERSION } from "../utils/version";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="build-version" content={BUILD_VERSION} />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -36,7 +37,6 @@ import { APP_VERSION } from "../utils/version";
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <title>{title}</title>
-    <link rel="stylesheet" href={`/styles/global.css?v=${APP_VERSION}`} />
   </head>
   <body>
     <header>
@@ -48,16 +48,45 @@ import { APP_VERSION } from "../utils/version";
     <footer>
       <Footer />
     </footer>
-    <script define:vars={{ version: APP_VERSION }}>
-      // Check if site needs to be updated
+
+    <script define:vars={{ buildVersion: BUILD_VERSION }}>
+      // Store current page load timestamp
+      const currentVersion = buildVersion;
       const lastVersion = localStorage.getItem("site-version");
-      if (lastVersion !== version) {
-        localStorage.setItem("site-version", version);
+
+      // Check version on page load
+      if (lastVersion !== currentVersion) {
+        localStorage.setItem("site-version", currentVersion);
+
+        // Clear browser cache for assets
         if (lastVersion) {
-          // Only reload if this isn't the first visit
-          window.location.reload(true);
+          caches.keys().then((names) => {
+            names.forEach((name) => {
+              caches.delete(name);
+            });
+            // Hard reload after cache clear
+            window.location.reload(true);
+          });
         }
       }
+
+      // Periodically check for updates (optional)
+      setInterval(() => {
+        fetch(window.location.href, { cache: "no-store" })
+          .then((response) => response.text())
+          .then((html) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+            const newVersion = doc.querySelector(
+              'meta[name="build-version"]'
+            )?.content;
+
+            if (newVersion && newVersion !== currentVersion) {
+              localStorage.setItem("site-version", newVersion);
+              window.location.reload(true);
+            }
+          });
+      }, 300000); // Check every 5 minutes
     </script>
   </body>
 </html>
