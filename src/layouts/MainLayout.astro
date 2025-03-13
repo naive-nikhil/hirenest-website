@@ -8,6 +8,7 @@ const {
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { APP_VERSION } from "../utils/version";
 ---
 
 <!doctype html>
@@ -35,6 +36,7 @@ import Footer from "../components/Footer.astro";
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <title>{title}</title>
+    <link rel="stylesheet" href={`/styles/global.css?v=${APP_VERSION}`} />
   </head>
   <body>
     <header>
@@ -46,5 +48,16 @@ import Footer from "../components/Footer.astro";
     <footer>
       <Footer />
     </footer>
+    <script define:vars={{ version: APP_VERSION }}>
+      // Check if site needs to be updated
+      const lastVersion = localStorage.getItem("site-version");
+      if (lastVersion !== version) {
+        localStorage.setItem("site-version", version);
+        if (lastVersion) {
+          // Only reload if this isn't the first visit
+          window.location.reload(true);
+        }
+      }
+    </script>
   </body>
 </html>

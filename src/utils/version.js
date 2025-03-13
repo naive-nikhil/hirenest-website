@@ -1,0 +1,1 @@
+export const APP_VERSION = '1.0.0'; // Update this number with each deployment 

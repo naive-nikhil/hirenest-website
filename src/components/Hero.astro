@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero_image.png"; // Move your image to src/assets
+import { APP_VERSION } from "../utils/version";
 ---
 
 <!-- Hero Section -->
@@ -42,7 +43,7 @@ import heroImage from "../assets/hero_image.png"; // Move your image to src/asse
   </div>
   <div class="w-full sm:w-[55%] py-0 sm:py-15">
     <Image
-      src={heroImage}
+      src={`/images/hero_image.png?v=${APP_VERSION}`}
       alt="Hirenest Hero Image"
       width={800}
       height={600}
